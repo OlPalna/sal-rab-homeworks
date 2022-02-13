@@ -6,6 +6,14 @@ function calcShipping(sum, min, shipping) {
     // Задание №2.1. Рассчитать доставку
 
     // создайте переменную shippingSum
+    let shippingSum;
+    if(productsSum == 0){
+        console.log(shippingSum = 0);
+    } else if(productsSum >= freeShippingMinSum){
+        console.log(shippingSum = 0);
+    } else(productsSum > 0 && productsSum < freeShippingMinSum) 
+        console.log(shippingSum = shippingPrice);
+    }
 
     // если productsSum равно 0,
     // то shippingSum присвоить значение 0
@@ -17,9 +25,10 @@ function calcShipping(sum, min, shipping) {
     // то shippingSum присвоить значение shippingPrice
 
     // Конец решения задания №2.1.
-
+    
     return shippingSum;
-}
+
+   
 
 function calcDiscount(sum, min, discount) {
     let productsSum = sum; // сумма в корзине
@@ -27,6 +36,13 @@ function calcDiscount(sum, min, discount) {
     let discountPart = discount; // величина скидки в процентах
 
     // Задание №2.2. Рассчитать скидку
+
+    let discountSum;
+    if(productsSum >= discountMinSum) {
+        console.log(discountSum = productsSum * discountPart / 100);
+    } else {
+        console.log(discountSum = 0)
+    }
 
     // создайте переменную discountSum
 
@@ -45,14 +61,24 @@ function calcInvoice({sum, discountMinSum, discountPart, shippingFreeMinSum, shi
 
     // Задача №2.3. Рассчитать скидки и доставку в корзине
 
+    let totalSum;
+    totalSum = productsSum;
+    console.log(totalSum = totalSum - discountSum);
+
     // создайте переменную totalSum
 
     // присвойте totalSum значение productsSum
     // уменьшите totalSum на discountSum
 
     let shippingSum = calcShipping(totalSum, shippingFreeMinSum, shippingPrice); // не изменяйте эту строку!!!
+    console.log(totalSum = totalSum + shippingSum);
+     
 
     // прибавьте к totalSum значение shippingSum
+
+    let freeShipping;
+    console.log(shippingSum == 0 && freeShipping == true);
+    console.log(shippingSum !== 0 && freeShipping == false);
 
     // создайте переменную freeShipping
     // запишите без использования if или любых других условий:
